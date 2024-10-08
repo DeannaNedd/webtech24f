@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Catalog Of Sweaters</title>
+
+	<style>
+	/* Your styles go here */
+	caption{
+		color: navy; text-align: center;
+	}
+
+	table{width:75%;margin-right: auto;margin-left: auto;
+
+font-family: Arial;text-align: center;color:black;font-size:20px;
+border:black;border-width: 2px; border-style: solid;
+background: url(brick.gif) repeat center fixed;
+border-collapse:collapse; width:60%;}
+
+td#first{
+	width:35%;
+}
+td#second{
+width:20%;
+}
+td#third{
+width:25%
+}
+p{
+	margin-left:auto;margin-right: auto;
+}
+input{
+	
+}
+
+
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+
+
+<form>
+<table>
+	<Caption>Catalog Of Sweaters</Caption>
+	<tr>
+		<td id="first">Product Image</td>
+		<td id="second">Product Price</td>
+		<td id="third">Product Selection</td>
+		<td id="second">Product Quantity</td>
+	</tr>
+
+
+	<tr>
+		<td><img src="redsweater.jpg" alt="Redsweater" title="Longsleeve red sweater" ></td>
+		<td>$35.00</td>
+		<td>
+			<input type="radio" name="Red Sweater" value="Red"/> Red Sweater
+		</td> 
+		<td>
+			<input type="text" name="Quantity" placeholder="Quantity" size="20" maxlength="40"/>
+		</td>
+	</tr>
+
+	<tr>
+		<td><img src="bluesweater.jpg" alt="bluesweater" title="Longsleeve blue sweater" ></td>
+		<td>$45.00</td>
+		<td>
+			<input type="radio" name="Blue Sweater" value="Blue"/> Blue Sweater
+		</td> 
+		<td>
+			<input type="text" name="Quantity" placeholder="Quantity" size="20" maxlength="40"/>
+		</td>
+	</tr>
+
+	<tr>
+		<td><img src="whitesweater.jpg" alt="Whitesweater" title="Longsleeve white sweater" ></td>
+		<td>$30.00</td>
+		<td>
+			<input type="radio" name="White Sweater" value="White"/> White Sweater
+		</td> 
+		<td>
+			<input type="text" name="Quantity" placeholder="Quantity" size="20" maxlength="40"/>
+		</td>
+	</tr>
+
+</table>
+
+<p>
+<input type="submit" name="submit" value="Submit Selection">
+<input type="reset" name="reset" value="Clear Selection">
+</p>
+
+</form>
+
+	
+	
+  </body>
+</html>
