@@ -9,15 +9,19 @@
 	<style>
 	/* Your styles go here */
 	caption{
-		color: navy; text-align: center;
+		color: navy; text-align: center;font-family: 'Lucida Grande'; font-size:2em; font-style:bold; padding-bottom: 20px;
 	}
-
+	
 	table{width:75%;margin-right: auto;margin-left: auto;
-
 font-family: Arial;text-align: center;color:black;font-size:20px;
 border:black;border-width: 2px; border-style: solid;
-background: url(brick.gif) repeat center fixed;
-border-collapse:collapse; width:60%;}
+border-collapse:collapse; width:60%; 
+}
+form{
+	background: url(brick.gif) repeat center fixed; border-style: double;
+}
+
+table,td{border:2px solid black;}
 
 td#first{
 	width:35%;
@@ -29,10 +33,17 @@ td#third{
 width:25%
 }
 p{
-	margin-left:auto;margin-right: auto;
+ text-align: center;
 }
-input{
-	
+input#submit{
+	height: 30px; background-color: green;
+}
+input#reset{
+	height: 30px; background-color: yellow;
+}
+
+body{
+	margin-right: 200px;margin-left: 200px; margin-top: 40px;margin-bottom: 40px;
 }
 
 
@@ -95,8 +106,8 @@ input{
 </table>
 
 <p>
-<input type="submit" name="submit" value="Submit Selection">
-<input type="reset" name="reset" value="Clear Selection">
+<input id="submit" type="submit" name="submit" value="Submit Selection">
+<input id="reset" type="reset" name="reset" value="Clear Selection">
 </p>
 
 </form>
