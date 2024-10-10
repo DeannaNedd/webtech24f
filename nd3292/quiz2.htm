@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Quiz 2 - About Instagram</title> <!-- No credit if you do, -1 if you do not -->
+
+        <style type="text/css">
+         
+         div#banner {
+            background-image: url(insta.jpg);
+            padding: .3%; margin-left: 200px; margin-right: 200px;
+        } 
+         h1#heading{
+            color: yellow;font-family: arial; text-align: center;
+         }
+        
+         form {
+    background-color: silver; font font-family:arial; color:navy; width:50%;
+    Margin-right: 300px; margin-left:300px; padding-left:100px; padding-top:50px; Padding-bottom:50px;
+    }
+    p#red{
+        color: red;
+    }
+    li#roman{
+        list-style: lower-roman;
+    }
+        </style>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <div id="banner">
+         <h1 id="heading">About Instagram</h1>
+        </div>
+        
+        <form method="POST" action="">
+            <p id="red">
+                Your Name:&nbsp;&nbsp;
+                <input type="text" name="my name" placeholder="Enter Name Here" size="20" maxlength="40"/>
+                   </p>
+        
+                   <p>
+                    Do You Like Instagram: &nbsp;&nbsp;
+                    <input type="radio" name="loveit" value="Yes"/> Yes
+                    <input type="radio" name="notmything" value="No"/> No
+                </p>
+
+                <p id="red">
+                    How Many Times a Day do You Access Instagram?:&nbsp;&nbsp;
+                    <select name="quantity">
+                       <option value="100">100</option>
+                       <option value="50">50</option>
+                       <option value="25">25</option>
+                    </select>
+                   </p>
+                   <p>
+                    <input id="submit" type="submit" name="submit" value="Submit Data">
+                    <input id="reset" type="reset" name="reset" value="Clear Data">
+                    </p>
+
+        </form>
+    
+
+        <h1> Courses offered in Babson</h1>
+        
+        <ul>
+           <li> <img src="star.gif"> Management Courses
+            <ul>
+               <li id="roman" > FME</li>
+                <li id="roman">SME</li>
+            </ul>
+            </li>
+           <li> <img src="star.gif"> Liberal Arts Courses
+            <ul>
+              <li id="roman"> FCI</li>
+              <li id="roman">  Critical Race </li>
+            </ul>
+            </li>
+        </ul>
+
+    
+    </body>
+</html>
