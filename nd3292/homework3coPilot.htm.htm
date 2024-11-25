@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Homework 3 -COPILOT VERSION</title>
+
+	<style>
+	/* Your styles go here */
+    form {background-color:silver; font-family:Arial; color:Navy;
+    padding-left:50px; padding-top:20px; padding-bottom:20px;
+    margin-right:auto; margin-left:auto; width:60%;}
+    .button {width:200px; height:60px; background-color:magenta; color:black;}
+    p#desc {margin:50px 200px; font-family:cursive; }
+    h3 {font-family:lucida handwriting; font-size:3em; text-align:center;}
+
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	function calculateTotal() {
+            // Get the product name and quantity from the form
+            let product = document.getElementById("product").value.trim().toLowerCase();
+            let quantity = document.getElementById("quantity").value.trim();
+
+            // Validate product name
+            const validProducts = ["milk", "apple", "fish"];
+            if (!validProducts.includes(product)) {
+                alert("Please enter a valid product name: Milk, Apple, or Fish.");
+                return;
+            }
+
+            // Validate quantity
+            if (quantity === "" || isNaN(quantity) || quantity < 0) {
+                alert("Please enter a valid quantity.");
+                return;
+            }
+
+            // Convert quantity to a number
+            quantity = parseFloat(quantity);
+
+            // Calculate the total cost
+            let cost = 0;
+            if (product === "milk") {
+                cost = 3.50;
+            } else if (product === "apple") {
+                cost = 0.99;
+            } else if (product === "fish") {
+                cost = 5.99;
+            }
+
+            let total = cost * quantity;
+
+            // Display the total cost with 2 decimal places
+            document.getElementById("total").value = `$${total.toFixed(2)}`;
+        }
+
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+<h3> Homework 3</h3>
+<p id="desc">
+    The form given below has 3 fields. Let us assume that the user will type in
+    the name of one of 3 products: Milk, Apple, or Fish. The user may enter these 
+    using any mix of cases, so be aware. You need to check to ensure that the user
+    enters a value. If it is not one of these 3, let the user know. 
+    Then the user will enter a quantity. You need to check to ensure that a quantity is entered 
+	(you may assume that 0 is a valid quality) and that the value is numeric. 
+    Once validated, use the following costs - 1 bottle of milk is $3.50; one 
+    apple is $0.99 and one pound of fish is $5.99 - and show the amount owed
+    in the third field. All of this should be done when the appropriate 
+    button is pressed. The amount must be shown with 2 decimal places and prefixed with
+	a $ (dollar) sign.     
+</p>
+<form>
+    <p>
+    <label for="product">Product:</label>
+    <input type="text" id="product" name="product"><br><br>
+    <label for="quantity">Quantity:</label>
+    <input type="text" id="quantity" name="quantity"><br><br>
+    </p>
+
+    <p>
+    <label for="total">Total Cost:</label>
+    <input type="text" id="total" name="total" readonly><br><br>
+</p>
+
+    <p>
+        <button class="button" type="button" onclick="calculateTotal()">What Do I Owe</button>
+		<button class="button" type="reset" name="reset" value="Clear All">Clear All</button>
+	</p>
+    
+</form>
+	
+  </body>
+</html>

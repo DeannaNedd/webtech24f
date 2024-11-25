@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+
+<html lang="en"> 
+
+
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+
+    <title>GetElementbyClass </title>
+
+
+    <style>
+
+    /* Your styles go here */
+    div{padding: 3%;margin-top:2% ;margin-bottom:2% ;}
+      div.odd{border:3px solid red;}
+      div.even{border:3px solid green;}
+    </style>
+
+    
+
+    <script type="text/javascript">
+    function do0dd()
+    {
+      const myodds= document. getElementsByClassName("odd")
+      const myevens= document. getElementsByClassName("even")
+      var x;
+      for (x=0; x < myodds.length; ++x)
+    {
+      myodds[x].style.backgroundColor="lime";
+    }
+    for (x=0; x < myevens.length; ++x)
+    {
+      myevens[x].style.backgroundColor="yellow";
+    }
+
+
+    }
+
+
+    </script>
+
+  </head>
+
+
+  <body >
+
+    <!-- Your HTML goes here -->
+  <div class="odd" onclick="do0dd()">
+
+  </div>
+  <div class="even">
+
+  </div>
+  <div class="odd" onclick="do0dd()">
+
+  </div>
+  <div class="even">
+
+  </div>
+  <div class="odd" onclick="do0dd()">
+
+  </div>
+  <div class="even">
+
+  </div>
+
+  </body>
+
+</html>
+
+

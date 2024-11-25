@@ -53,15 +53,42 @@
                 myinp=myinp.toLowerCase();
              }
 
-             else (myinp=="Pant")
+             else if (myinp=="Pant")
            {
             myinp= prompt("What are you willing to pay for the Pant?");
             myinp=myinp.toLowerCase();
            }
 
+           /*For the alerts*/
+
+           const product= document.getElementById("product");
+           const quantity= document.getElementById("quantity");
+           const totalField= document.getElementById("total");
+        
+
+           if (product=="XXX")
+           {
+            alert ("Please Select A Product");
+            return;
+           }
+
+           else if (quantity=="XXX")
+           {
+            alert ("Please Select a Quantity");
+            return;
+           }
+
+           if (isNaN(price) || price < 12.99 || price > 24.99) 
+           {
+            alert("The price must be between $12.99 and $24.99.");
+            return;
+           }
+           
+           const total= price * quantity
+           totalField= $
+
+
         }
-
-
 
         </script>
         
@@ -86,6 +113,8 @@
                     <li> Validate to make sure that one item is selected from each list. Let the user know
                         when the user has not selected one from each list. (4)
                     </li>
+
+
                     <li>Make sure that the price is between $12.99 and $24.99 (5). If not, alert the user that the price entered has to between
                     the two values above.</li>
                     <li>Please display the total (with $ signs) when the compute button is clicked (10). </li> 
@@ -106,7 +135,7 @@
                     </select> 
                      </td>
                      <td class="two">
-                     <select name="quantity">
+                     <select id="quantity" name="quantity">
                         <option value="XXX">Select Quantity</option>
                         <option value="10">10 Units</option>
                         <option value="20">20 Units</option>
@@ -123,7 +152,6 @@
                 <tr>
                     <td  id="prompt" onclick="setPrompt()" colspan="3"><button>Compute</button>
                     <input type="reset" name="reset" value="Clear"/></td>
-
                 </tr>
            </table>
          </form>

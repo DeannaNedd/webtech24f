@@ -24,6 +24,7 @@
                 myimg= document.getElementById ("a");
                 var myinp;
                 myinp= prompt("Enter one of maple,shamrock, thyme, or clover");
+                myinp=myinp.toLowerCase();
                 if (myinp=="maple")
              {
                 myimg.src="maple-1.jpg"
@@ -52,6 +53,20 @@
            }
 
              }  
+
+             function changePic()
+             {
+                const myimg= document.getElementById("daimg");
+                if (myimg.src=="planes.jpg")
+             {
+                myimg.src="ships.jpg";
+             }
+             else
+            { 
+                myimg.src="planes.jpg"; 
+            }
+            
+             }
 
            
         </script>
@@ -86,7 +101,7 @@
             other image. The ALT and TITLE must change appropriately.
         </p></div>
         <div>
-            <img src="planes-1.jpg" alt="Planes" title="Flying High" width="200"/>
+            <img id="daimg" onclick="changePic()" src="planes-1.jpg" alt="Planes" title="Flying High" width="200"/>
         </div>
     
     </body>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title></title><!-- a point off if not changed.-->
+
+	<style>
+	/* Your styles go here */
+
+	h1 {font-family:Arial; font-size:large; text-align:center; color:Navy;}
+	div {height:75px; width:75px; background-color:red; position:absolute; left:200px; top:400px;}
+	    
+	p#inst {font-family:Arial; font-size:large; color:navy; font-weight:bold;}
+	
+	
+	
+	</style>
+	
+	
+	<script type="text/javascript">	
+   var pos = 0;    
+    var flystatus=0, mytimer;
+
+	function moveBox()
+{
+	var mybox;
+
+	mybox= document.getElementById("redbox");
+
+	mybox.style.top= pos + "px";
+
+	pos = pos + 1;
+
+	if(pos>1000)
+
+	{
+
+	pos=0;
+
+	}
+
+  mytimer= setTimeout("moveBox()", 30);
+} 
+	
+	</script>
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1> Animate the boxes (25 points) </h1>
+	<!-- You are asked to animate the box provided where the box travels from 
+	     the bottom to the top of the screen. You can set the initial position
+		 of the box to 400px on the vertical axis and 200px on the horizontal
+		 axis (i.e. 400px from the top and 200 from the left).
+
+
+		 Move the box towards the top (from the bottom). When the box reaches
+		 the top (say 100px), move the box 100px further left and restart 
+		 the movement from bottom to top by resetting the vertical axis to 400px
+		 (the inital setting). When it reaches 800px on the horizontal
+		 axis, reset the horizontal to 200px (inital setting).
+
+
+		 The grading is as follows: (1) Setup for the function to work (5), 
+		 (2) moving the box from bottom to top (10), resetting the vertical (5)
+		 and resetting the horizontal (5).--> 
+
+	<div id="redbox" onclick="moveBox()">
+
+		Animate Me!!
+	</div>
+		
+	
+	
+  </body>
+</html>
