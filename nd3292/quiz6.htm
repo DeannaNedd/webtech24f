@@ -20,35 +20,32 @@
 	
 	
 	<script type="text/javascript">	
-   var pos = 0;    
+   var  verticalPos = 400; 
+   var horizontalPos=200;      
     var flystatus=0, mytimer;
 
 	function moveBox()
 {
 	var mybox;
-
 	mybox= document.getElementById("redbox");
 
-	mybox.style.top= pos + "px";
+	mybox.style.top= verticalPos + "px";
+	verticalPos -= 5;
 
-	pos = pos + 1;
+	if (verticalPos <= 100) 
+	        {
+                verticalPos = 400; 
+                horizontalPos += 100;
+                mybox.style.left = horizontalPos + "px";
+            }
 
-	if(pos>1000)
-
-	{
-
-	pos=0;
-
-	}
-
-  mytimer= setTimeout("moveBox()", 30);
-} 
-
-
-
-	
-	
-	
+	if (horizontalPos >= 800) 
+	        {
+                horizontalPos = 200;
+            }
+			
+  mytimer= setTimeout("moveBox()", 60);
+} 	
 	</script>
 	
 	
@@ -67,18 +64,7 @@
 		 the top (say 100px), move the box 100px further left and restart 
 		 the movement from bottom to top by resetting the vertical axis to 400px
 		 (the inital setting). When it reaches 800px on the horizontal
-		 axis, reset the horizontal to 200px (inital setting).
-
-
-		 The grading is as follows: (1) Setup for the function to work (5), 
-		 (2) moving the box from bottom to top (10), resetting the vertical (5)
-		 and resetting the horizontal (5).
-		 NOTE: If you add code here that you cannot explain, even if you say that you
-        used this code from gen-AI for practice, IF you cannot explain the code 
-        to me you will not be given credit. I have to be fair to those students in the 
-        class that resort to original effort instead of relying on external sources. 
-        You will get more points for trying and failing than for successfully implementing
-        code that is not yours. --> 
+		 axis, reset the horizontal to 200px (inital setting). --> 
 
 	<div id="redbox" onclick="moveBox()">
 
