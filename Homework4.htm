@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	 <title>Graded Homework #3</title>
+     <style type="text/css">
+        h1 {text-align:center; font-family:Arial; color: Navy;}
+		table {float:left; width:30%; margin-right:100px;}
+		table, td {border:1px solid black;}
+		table img {width:100%;}
+		img#big {width:50%;}
+		h3 { margin-left:50%;}
+		p {font-family:sans-serif; color:navy; margin-right:50px; margin-left:50px; font-size:large;}
+     </style>
+
+
+        <script type="text/javascript">
+
+         window.onload = function() 
+   {   
+        const thumbnails = document.querySelectorAll("table img");
+        const bigImage = document.getElementById("big");
+
+        for (let thumbnail of thumbnails)
+        {
+            thumbnail.onclick = function() 
+            {
+                bigImage.src = thumbnail.src;
+                bigImage.alt = thumbnail.alt;
+                bigImage.title = thumbnail.title;
+
+                const caption = prompt("Enter a caption for the image:");
+                document.getElementById("cap").textContent = caption || "";
+            };
+        };
+    };    
+        </script>
+       
+       
+
+    </head>
+
+    <body>
+ 
+ <table>
+ 	<tr>
+     <td> <img src="alaskaglacier1R.jpg" alt="Alaska 1" title="A1"/> </td>
+     <td> <img src="alaskaglacier2R.jpg" alt="Alaska 2" title="A2"/> </td>
+    </tr>
+    <tr>
+     <td> <img src="alaskaicewallR.jpg" alt="Alaska 3" title="A3"/> </td>
+     <td> <img src="alaskaLakeR.jpg" alt="Alaska 4" title="A4"/> </td>
+    </tr>
+   </table>
+   
+   <img id="big" src="" alt="" title="" /> <!-- This is the larger image -->
+   <h3 id="cap"></h3> <!-- This is the image caption -->
+       
+    </body>
+</html>
