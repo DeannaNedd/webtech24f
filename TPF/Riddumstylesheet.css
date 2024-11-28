@@ -7,6 +7,13 @@ body {
     color: #f0f6fc; 
 }
 
+.active {
+    font-weight: 100;
+    border-color:ivory;
+    border-style:solid;
+    padding: 15px;
+}
+
 /* Navbar */
 .navbar {
     display: flex;
