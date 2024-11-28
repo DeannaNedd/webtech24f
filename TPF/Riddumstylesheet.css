@@ -1,0 +1,240 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("orangeaurabanner.jpeg");
+    color: #f0f6fc; 
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:transparent;
+    /*#161b22*/
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-family:monospace;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #f0f6fc;
+}
+
+.navbar .nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.search-button, .dashboard-button {
+    background-color:transparent;
+    color:transparent;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dashboard-button {
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+/* ----------------------------------------------------Dropdown Menu---------------------------------------------------- */
+.nav-links li {
+    position: relative; /* Ensure dropdowns are positioned relative to parent */
+}
+
+.nav-links .dropdown {
+    display: none; /* Hide dropdowns by default */
+    position: absolute;
+    background-color:ivory; /* Dropdown background */
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links .dropdown li {
+    margin: 0;
+    padding: 5px 20px;
+}
+
+.nav-links .dropdown li a {
+    color: rgb(241, 174, 17);
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.nav-links .dropdown li a:hover {
+    background-color: #f0f6fc;
+    color: #161b22; /* Highlight effect */
+    border-radius: 3px;
+}
+
+/* Show dropdown on hover */
+.nav-links li:hover .dropdown {
+    display: block;
+    z-index: 1000; /* Ensure dropdowns appear above other elements */
+}
+/*-------------------------------------------------------------------------------------------------*/
+
+/* ORANGE BANNER Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #0d1117, #161b22);
+    background-image: url("orangeaurabanner.jpeg");
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: ivory; /* Subtle text */
+}
+
+.hero .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.secondary-button {
+    padding: 15px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.secondary-button {
+    background-color: ivory;
+    border: 1px transparent;
+    color: #0f1822;
+}
+
+/* Illustrations */
+.hero .illustration {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero .illustration img {
+    width: 100px;
+    height: auto;
+}
+
+.genres {
+    padding: 40px 20px;
+    text-align: center;
+    color: rgb(241, 174, 17);
+    background-color: black;
+}
+
+.genre-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.genre-card {
+    background:ivory;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.genre-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Artist Spotlight Section */
+.artist-spotlight {
+    padding: 50px 20px;
+    text-align: center;
+    background-color:ivory; /* Dark background for contrast */
+    color: rgb(241, 174, 17);
+}
+
+.artist-spotlight h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: rgb(241, 174, 17); /* Accent color for the heading */
+    text-align: center;
+}
+
+.artist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    text-align: center;
+}
+
+.artist-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits within the circle */
+    border: 2px solid white; /* Optional: Border around the circle */
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.artist-card img:hover {
+    transform: scale(1.6); /* Slight zoom on hover */
+}
+
+.artist-card h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #0d1117;
+}
+
+.artist-card p {
+    font-size: 0.85rem;
+    color: #0d1117; /* Subtle text color */
+    line-height: 1.4;
+}
+
+
+/*----------------------------------------------END OF HOMEPAGE STYLESHEET*----------------------------------------------------/
