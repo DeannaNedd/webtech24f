@@ -244,5 +244,10 @@ body {
     line-height: 1.4;
 }
 
-
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgb(241, 174, 17);
+    color: white; 
+}
 /*----------------------------------------------END OF HOMEPAGE STYLESHEET*----------------------------------------------------/
